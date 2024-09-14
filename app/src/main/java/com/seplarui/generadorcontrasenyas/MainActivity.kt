@@ -31,7 +31,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun generarLetraAleatoria(): String {
-        val letras = ('A'..'Z') + ('a'..'z') +('0'..'9')// Letras mayúsculas y minúsculas
+        val letras = ('A'..'Z') + ('a'..'z') +('0'..'9') + listOf(
+            '¡', '!', '·', '\\', '@', '€', '#', '~', '$', '%', '&', '/', '(', ')', '=', '\'',
+            '?', '¿', '+', '*', '-', '_', ':', ';', '.', ',', '<', '>', '^', '[', ']', '{', '}', '\\', '|'
+        )
+
         val numeros = ('0'..'2')
         return (1..numeros.random().code).map { letras.random() }.joinToString("")
     }
