@@ -1,37 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:background="@color/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/txtEdit"
+        android:layout_width="238dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:hint="@string/contrasenya"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenContrasenya"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
 
     <Button
-        android:id="@+id/bnGenerarContrasenya"
+        android:id="@+id/btnGenContrasenya"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="@string/bnGenerarContrasenya"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="302dp"
-        android:layout_height="104dp"
-        app:layout_constraintBottom_toTopOf="@+id/bnGenerarContrasenya"
+    <ImageButton
+        android:id="@+id/imgCopyContrasenya"
+        android:layout_width="75dp"
+        android:layout_height="76dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Botón de icono"
+        android:src="@drawable/copy_solid"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenContrasenya"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtGenerarContrasenya"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:textColor="@color/black" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/txtEdit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

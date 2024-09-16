@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">GeneradorContrasenyas</string>
     <string name="bnGenerarContrasenya">Generar Contraseña</string>
+    <string name="contrasenya">Contraseña</string>
 </resources>
